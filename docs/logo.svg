@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-label="tafqit logo">
+  <rect width="720" height="220" rx="28" fill="#faf8f5"/>
+  <rect x="28" y="28" width="164" height="164" rx="28" fill="#fffdfa" stroke="#d9cdbc" stroke-width="8"/>
+  <path d="M66 78h88" stroke="#8c511f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M66 110h62" stroke="#8c511f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M66 142h88" stroke="#8c511f" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="143" cy="110" r="12" fill="#8c511f"/>
+  <text x="232" y="102" fill="#2e2219" font-family="IBM Plex Sans, Arial, sans-serif" font-size="48" font-weight="700">tafqit</text>
+  <text x="232" y="146" fill="#6c5a4a" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Arabic number-to-words for TypeScript</text>
+</svg>

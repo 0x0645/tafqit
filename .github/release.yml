@@ -1,0 +1,21 @@
+changelog:
+  categories:
+    - title: Added
+      labels:
+        - feature
+        - enhancement
+    - title: Fixed
+      labels:
+        - fix
+        - bug
+    - title: Documentation
+      labels:
+        - docs
+    - title: Tooling
+      labels:
+        - ci
+        - chore
+        - tooling
+  exclude:
+    labels:
+      - skip-changelog

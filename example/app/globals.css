@@ -1,0 +1,410 @@
+:root {
+  --background: #faf8f5;
+  --surface: #ffffff;
+  --surface-soft: #f4eee6;
+  --border: #ddd2c5;
+  --border-strong: #ccb9a4;
+  --text: #2e2219;
+  --text-soft: #6c5a4a;
+  --primary: #8c511f;
+  --shadow: 0 2px 8px rgba(46, 34, 25, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--background);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-arabic), var(--font-latin), sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+}
+
+.sidebar {
+  background: #f3ece3;
+  border-left: 1px solid var(--border);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebarBlock,
+.sectionStack,
+.exampleList,
+.sidebarNav,
+.subsection {
+  display: grid;
+  gap: 10px;
+}
+
+.productName {
+  font-family: var(--font-latin), sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.productMeta,
+.toolbar p,
+.emptyState,
+.exampleCard span,
+.inlineNote {
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.repoLink {
+  color: var(--primary);
+  font-family: var(--font-latin), sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.repoLink:hover {
+  text-decoration: underline;
+}
+
+.sectionTitle,
+.panelTitle,
+.subsectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navItem,
+.exampleButton {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  min-height: 40px;
+  text-align: right;
+  border-radius: 8px;
+  padding: 0 12px;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.navItem:hover,
+.exampleButton:hover {
+  background: #fcfaf7;
+  border-color: var(--border-strong);
+}
+
+.navItemActive {
+  background: #ede1d4;
+  border-color: #c8ad8c;
+}
+
+.exampleCard {
+  min-height: 58px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 4px;
+}
+
+.exampleCard strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.exampleCard span {
+  font-size: 12px;
+}
+
+.main {
+  padding: 24px 28px 36px;
+}
+
+.toolbar {
+  padding-bottom: 18px;
+}
+
+.toolbarGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.toolbar h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.contentGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: start;
+}
+
+.simplifiedGrid {
+  grid-template-areas:
+    "form result"
+    "form data";
+}
+
+.formPanel {
+  grid-area: form;
+}
+
+.resultPanel {
+  grid-area: result;
+}
+
+.dataPanel {
+  grid-area: data;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.sectionBlock {
+  padding-top: 8px;
+  border-top: 1px solid #efe7dd;
+}
+
+.panelTitleInline {
+  padding-top: 6px;
+}
+
+.fieldGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.formRowCompact {
+  gap: 10px;
+}
+
+.formRowMain {
+  gap: 14px 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.formRowSplit {
+  gap: 14px 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.twoColumns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.balancedGrid {
+  align-items: end;
+}
+
+.fieldSpanFull {
+  grid-column: 1 / -1;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  align-content: start;
+}
+
+.field span {
+  color: var(--text-soft);
+}
+
+.field input,
+.field select {
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fffdfa;
+  padding: 0 12px;
+  color: var(--text);
+  outline: none;
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #b88d63;
+  box-shadow: 0 0 0 3px rgba(184, 141, 99, 0.12);
+}
+
+.inlineNote {
+  border: 1px solid var(--border);
+  background: #fcf8f3;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.optionGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.compactOptions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.checkboxField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 12px;
+  background: var(--surface-soft);
+  font-size: 14px;
+}
+
+.checkboxField input {
+  margin: 0;
+}
+
+.resultBox,
+.codeBlock {
+  border: 1px solid var(--border);
+  background: #fffdfa;
+  border-radius: 8px;
+}
+
+.resultBox {
+  min-height: 120px;
+  padding: 16px;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 14px;
+  direction: ltr;
+  text-align: left;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-family: var(--font-latin), monospace;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.highlightedCode {
+  background: #fbf6ef;
+}
+
+.jsonPlain {
+  color: #5e4a39;
+}
+
+.jsonKey {
+  color: #7b4313;
+}
+
+.jsonString {
+  color: #466948;
+}
+
+.jsonNumber {
+  color: #8a5a11;
+}
+
+.jsonLiteral {
+  color: #6f518b;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dataTable th,
+.dataTable td {
+  border-bottom: 1px solid var(--border);
+  padding: 11px 8px;
+  text-align: right;
+}
+
+.dataTable th {
+  color: var(--text-soft);
+  font-weight: 500;
+  width: 116px;
+}
+
+.dataTable tr:last-child th,
+.dataTable tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (max-width: 1080px) {
+  .toolbarGrid,
+  .contentGrid,
+  .simplifiedGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form"
+      "result"
+      "data";
+  }
+}
+
+@media (max-width: 860px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-left: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main {
+    padding: 18px;
+  }
+
+  .twoColumns,
+  .formRowMain,
+  .formRowSplit,
+  .compactOptions {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar h1 {
+    font-size: 24px;
+  }
+
+  .resultBox {
+    font-size: 20px;
+  }
+}
