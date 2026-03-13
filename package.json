@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TypeScript Arabic tafqit/tafqeet package with grammatical rules, currencies, and counted nouns.",
   "license": "MIT",
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@10.32.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/0x0645/tafqit.git"
