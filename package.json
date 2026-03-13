@@ -33,7 +33,9 @@
   ],
   "scripts": {
     "build": "tsup",
+    "build:example": "pnpm --filter tafqit-example build",
     "check": "tsc --noEmit",
+    "dev:example": "pnpm --filter tafqit-example dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run"
