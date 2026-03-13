@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/0x0645/tafqit/main/docs/logo.svg" alt="Tafqit logo" width="560" />
+</p>
+
 # Tafqit
 
 `@0x0645/tafqit` converts numbers into Arabic words with support for grammatical gender, i'rab-sensitive forms, counted nouns, legal phrasing, currencies, and decimal quantities that can decompose into smaller units such as `ريال/هللة`, `متر مربع/سنتيمتر مربع`, or `ساعة/دقيقة`.
@@ -138,4 +142,3 @@ MIT - see `LICENSE`.
 
 - GitHub: `https://github.com/0x0645/tafqit`
 - Issues: `https://github.com/0x0645/tafqit/issues`
-
